@@ -15,6 +15,9 @@ function DisplayItem() {
         const result = await axios.get("http://localhost:8081/inventory");
         setInventory(result.data);
     }
+    const UpdateNavigate = (id) => {
+        window.location.href = `/updateItem/${id}`;
+    }
     return (
         <div>
             <h2>Inventory Item</h2>
@@ -41,6 +44,10 @@ function DisplayItem() {
       <td>{item.itemCategory}</td>
       <td>{item.itemQty}</td>
       <td>{item.itemDetails}</td>
+
+      <td>
+         <button onClick={() => UpdateNavigate(item.id)}>Update</button>
+      </td>
          
     </tr>
     
