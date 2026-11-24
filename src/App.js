@@ -2,6 +2,7 @@ import React from 'react';
 import {Route,Routes} from 'react-router-dom';
 import AddItem from './components/AddItem/AddItem';
 import Home from './components/Home/Home';
+import DisplayItem from './components/DisplayItem/DisplayItem';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/addItem" element={<AddItem/>} />
+          <Route path="/allitems" element={<DisplayItem/>} />
         </Routes>
 
       </React.Fragment>
