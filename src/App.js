@@ -1,16 +1,19 @@
 import React from 'react';
-import {Route,Routes} from 'react-router';
+import {Route,Routes} from 'react-router-dom';
+import AddItem from './components/AddItem/AddItem';
+import Home from './components/Home/Home';
+
 
 function App() {
   return (
     <div>
       <React.Fragment>
         <Routes>
-          <Route path="/" element={<h1>Home</h1>} />
-          <Route path="/addItem" element={<h1>Add Item</h1>} />
+          <Route path="/" element={<Home/>} />
+          <Route path="/addItem" element={<AddItem/>} />
         </Routes>
 
-</React.Fragment>
+      </React.Fragment>
 
 
     </div>
